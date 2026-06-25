@@ -1,0 +1,75 @@
+<fieldset 
+  data-form-field-visible='{
+    "statement-type": ["doc1"],
+    "consumer-protection-claim": ["no"],
+    "requirements": ["14.3.1", "14.3.2", "14.3.3", "14.3.4"]
+  }'
+  class="constructor__block"
+>
+  <div class="flex flex-wrap-tablet ga-12 mb-title constructor__label-cite">
+    <legend class="h4 mb-0 constructor__label-block">
+      3.9. Утрата / повреждения груза + его стоимость зафиксированы актом / диспашей от
+    </legend>
+    <div class="flex-grow-2">
+      <input
+        name="cargo-loss-damage-record-date"
+        placeholder="месяц.0000г."
+        data-input-date-only-month
+        data-input-date="m.Y"
+        data-input-required
+        class="form-input w-300px min-w-100px"
+      />
+      <cite class="note">укажите даты их составления</cite>
+    </div>
+  </div>
+  <div class="constructor__item">
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--full">
+        <div class="constructor__label-row constructor__label-cite">
+          <div class="constructor__label-text">Стоимость утраченного груза составляет</div>
+          <div class="flex ga-12 items-center flex-grow-2">
+            <input
+              type="number"
+              name="cargo-loss-damage-record-sum"
+              data-input-required
+              class="form-input w-200px"
+            />
+            <span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--full">
+        <div class="constructor__label-row constructor__label-cite">
+          <div class="constructor__label-text">Стоимость груза снизилась из-за повреждений на</div>
+          <div class="flex ga-12 items-center flex-grow-2">
+            <input
+              type="number"
+              name="cargo-loss-damage-record-damage-sum"
+              data-input-required
+              class="form-input w-200px"
+            />
+            <span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--full">
+        <div class="constructor__label-row constructor__label-cite">
+          <div class="constructor__label-text">Размер провозной платы за перевозку этого груза составляет</div>
+          <div class="flex ga-12 items-center flex-grow-2">
+            <input
+              type="number"
+              name="cargo-loss-damage-record-delivery-sum"
+              data-input-required
+              class="form-input w-200px"
+            />
+            <span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

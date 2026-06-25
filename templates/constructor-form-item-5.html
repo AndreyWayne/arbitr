@@ -1,0 +1,37 @@
+<div class="constructor__row" data-row>
+    <div class="constructor__col">
+        <label class="constructor__label-row">
+            <span class="constructor__label-text">
+                До какой даты
+            </span>
+            <input
+                name="debt-payments-date[]"
+                type="text"
+                class="form-input"
+                placeholder="00.00.0000"
+                data-input-required
+                data-input-date="d.m.Y">
+        </label>
+    </div>
+    <div class="constructor__col">
+        <label class="constructor__label-row">
+            <span class="constructor__label-text">
+                Сумма в рублях
+            </span>
+            <input
+                name="debt-payments-amount[]"
+                type="text"
+                class="form-input"
+                data-input-required
+                data-input-mask-number-space
+            >
+        </label>
+    </div>
+
+    <button class="constructor__row-delete btn-toggle btn-toggle--delete w-full" data-btn-delete-row type="button">
+        <span class="btn-toggle__icon"></span>
+        <div class="btn-toggle__text">
+            Удалить эту строку, если она добавлена ошибочно
+        </div>
+    </button>
+</div>

@@ -1,0 +1,37 @@
+<fieldset 
+    data-form-field-visible='{
+        "statement-type": ["doc1"],
+        "consumer-protection-claim": ["no"],
+        "requirements": ["6", "7.1", "8.1", "8.2", "8.3", "9.1", "10.1", "11", "12.1", "12.2", "13", "14.1", "14.4", "15", "16.1"]
+    }'
+    class="constructor__block"
+>
+    <legend class="h4 constructor__block-title">
+        6. Задолженность (без неустоек)
+    </legend>
+    <div class="constructor__item">
+        <div class="constructor__row">
+            <div class="constructor__col constructor__col--full">
+                <label class="constructor__label-row constructor__label-cite">
+                    <span class="constructor__label-text">
+                        Его полные ФИО
+                    </span>
+                    <div>
+                        <input type="text" placeholder="Например, до 15 числа месяца, следующего за расчетным" name="debtor-debt" data-input-required class="form-input" />
+                        <cite class="note">Укажите до какого числа + какого месяца (текущего / или следующего за расчетным) производится оплата</cite>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col constructor__col--full">
+                <label class="constructor__label-row constructor__label-cite">
+                    <span class="constructor__label-text">
+                        Данное условие содержится в пункте договора №
+                    </span>
+                    <input type="text" name="debtor-debt-contract-number" data-input-required class="form-input w-340px" />
+                </label>
+            </div>
+        </div>
+    </div>
+</fieldset>

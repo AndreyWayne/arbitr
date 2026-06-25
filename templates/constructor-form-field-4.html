@@ -1,0 +1,50 @@
+<div class="constructor__row" data-row>
+    <div class="constructor__col">
+        <label class="constructor__label-row">
+            <span class="constructor__label-text">
+                До какой  даты*
+            </span>
+            <input
+                    type="text"
+                    class="form-input"
+                    placeholder="00.00.0000" data-input-required
+                    name="debtor-pay-delay-date[]"
+                    data-input-date="d.m.Y">
+        </label>
+    </div>
+    <div class="constructor__col">
+        <label class="constructor__label-row">
+            <span class="constructor__label-text">
+                Сумма в рублях*
+            </span>
+            <input
+                    type="text"
+                    class="form-input"
+                    name="debtor-pay-delay-amount[]"
+                    data-input-mask-number-space
+                    data-input-required>
+        </label>
+    </div>
+    <div class="constructor__col">
+        <label class="constructor__label-row">
+            <span class="constructor__label-text">
+                За период*
+            </span>
+            <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Месяц 0000"
+                    name="debtor-pay-delay-period[]"
+                    data-input-required
+                    data-input-date="m.Y"
+                    data-input-date-only-month>
+        </label>
+    </div>
+
+    <button class="constructor__row-delete btn-toggle btn-toggle--delete" data-btn-delete-row type="button">
+        <span class="btn-toggle__icon"></span>
+        <div class="btn-toggle__text">
+            Удалить эту строку, если она добавлена Вами ошибочно
+        </div>
+    </button>
+</div>

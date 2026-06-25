@@ -1,0 +1,93 @@
+<fieldset 
+  data-form-field-visible='{
+    "statement-type": ["doc1"],
+    "consumer-protection-claim": ["no"],
+    "requirements": ["10.2"]
+  }'
+  class="constructor__block"
+>
+  <div class="flex-wrap ga-12 items-center mb-title">
+    <legend class="h4 mb-0">3.7. Договор выкупного лизинга расторгнут</legend>
+    <input
+      name="lease-termination-date"
+      data-input-date-only-month
+      data-input-date="m.Y"
+      data-input-required
+      placeholder="месяц.0000г."
+      class="form-input w-200px min-w-100px"
+    />
+  </div>
+  <div class="constructor__item">
+    <b class="constructor__bold-label"> На эту дату: </b>
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--full">
+        <div class="constructor__label-row constructor__label-cite">
+          <div class="constructor__label-text">
+            размер выплаченных лизингополучателем лизинговых платежей составляет
+          </div>
+          <div class="flex ga-12 items-center flex-grow-2">
+            <input
+              data-input-required
+              type="number"
+              name="lease-termination-sum"
+              class="form-input w-200px"
+            />
+            <span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--full">
+        <div class="constructor__label-row">
+          <div class="constructor__label-text white-space-normal">
+            размер необходимых затрат лизингодателя на демонтаж, возврат, транспортировку, хранение, ремонт и реализацию
+            предмета лизинга, + его платы за досрочный возврат кредита на приобретение предмета лизинга, составляет
+          </div>
+          <div class="flex ga-12 items-center flex-grow-2">
+            <input
+              data-input-required
+              type="number"
+              name="lease-termination-cost-sum"
+              class="form-input w-200px"
+            />
+            <span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <b class="constructor__bold-label"> Предмет лизинга: </b>
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--full">
+        <div class="constructor__label-row constructor__label-cite">
+          <div class="constructor__label-text">был приобретен лизингодателем за</div>
+          <div class="flex ga-12 items-center flex-grow-2">
+            <input
+              data-input-required
+              type="number"
+              name="lease-termination-item-sum"
+              class="form-input w-200px"
+            />
+            <span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--full">
+        <div class="constructor__label-row constructor__label-cite">
+          <div class="constructor__label-text">был реализован им за</div>
+          <div class="flex ga-12 items-center flex-grow-2">
+            <input
+              data-input-required
+              type="number"
+              name="lease-termination-release-sum"
+              class="form-input w-200px"
+            />
+            <span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

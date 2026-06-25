@@ -1,0 +1,281 @@
+
+<!-- 5. skan-report -->
+
+<fieldset 
+    data-form-field-visible-multiple='[
+        {
+            "statement-type": ["doc2"],
+            "conclusion-change-requirements": ["val1", "val2"]
+        },
+        {
+            "statement-type": ["doc1"],
+            "consumer-protection-claim": ["no"],
+            "requirements": ["1.1", "1.2", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "4.1", "4.2", "4.3", "4.4", "5.1", "5.2", "5.3", "6", "7.1", "8.1", "8.2", "8.3", "9.1", "10.1", "11", "12.1", "12.2", "13", "14.1", "14.4", "15", "16.1"]
+        }
+    ]'
+    class="constructor__block"
+>
+    <legend class="h4 constructor__block-title">
+        5. Вы являетесь:
+    </legend>
+    <div class="constructor__item">
+        <div class="constructor__row">
+            <div class="constructor__col">
+                <label class="radio">
+                    <input class="radio__input" 
+                        type="radio"
+                        name="debt-type"
+                        value="organization"
+                        checked>
+                    <span class="radio__emulator">
+                        <svg class="radio__icon i-icon">
+                            <use xlink:href="#icon-check"></use>
+                        </svg>
+                    </span>
+                    <span class="radio__label">
+                        Организацией
+                    </span>
+                </label>
+            </div>
+            <div class="constructor__col">
+                <label class="radio">
+                    <input class="radio__input" 
+                        type="radio"
+                        name="debt-type"
+                        value="ie">
+                    <span class="radio__emulator">
+                        <svg class="radio__icon i-icon">
+                            <use xlink:href="#icon-check"></use>
+                        </svg>
+                    </span>
+                    <span class="radio__label">
+                        ИП
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div 
+        data-form-field-visible-multiple='[
+            {
+                "statement-type": ["doc2"],
+                "debt-type": ["organization"],
+                "conclusion-change-requirements": ["val1", "val2"]
+            },
+            {
+                "statement-type": ["doc1"],
+                "consumer-protection-claim": ["no"],
+                "requirements": ["1.1", "1.2", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "4.1", "4.2", "4.3", "4.4", "5.1", "5.2", "5.3", "6", "7.1", "8.1", "8.2", "8.3", "9.1", "10.1", "11", "12.1", "12.2", "13", "14.1", "14.4", "15", "16.1"],
+                "debt-type": ["organization"]
+            }
+        ]'
+        class="constructor__item"
+    >
+        <div class="constructor__row">
+            <div class="constructor__col constructor__col--full">
+                <div class="constructor__label-row items-start">
+                    <span class="constructor__label-text">
+                        Загрузите скан акта сверки взаимных расчетов  / или лицевого счета должника 
+                    </span>
+                    <div class="file-attacher" data-file-attacher>
+                        <input 
+                            id="skan-report" 
+                            accept=".xls, .xlsx, application/vnd.ms-excel" 
+                            type="file" 
+                            name="skan-report" 
+                            data-file-attacher-input
+                            data-input-required
+                            class="file-attacher__input" 
+                        />
+                        <label class="file-attacher__btn-text" for="skan-report" data-file-attacher-add-btn>
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-file"></use>
+                            </svg>
+                            <span>Прикрепить файл </span>
+                        </label>
+                        <ul class="file-attacher__list" data-file-attacher-file-list></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        data-form-field-visible-multiple='[
+            {
+                "statement-type": ["doc2"],
+                "debt-type": ["ie"],
+                "conclusion-change-requirements": ["val1", "val2"]
+            },
+            {
+                "statement-type": ["doc1"],
+                "consumer-protection-claim": ["no"],
+                "requirements": ["1.1", "1.2", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "4.1", "4.2", "4.3", "4.4", "5.1", "5.2", "5.3", "6", "7.1", "8.1", "8.2", "8.3", "9.1", "10.1", "11", "12.1", "12.2", "13", "14.1", "14.4", "15", "16.1"],
+                "debt-type": ["ie"]
+            }
+        ]'
+        data-constructor-block="section-5"
+    >
+        <b class="constructor__bold-label">
+            Должник должен оплатить (без неустоек) 
+        </b>
+        <div class="constructor__item">
+            <div class="constructor__row">
+                <div class="constructor__col">
+                    <label class="constructor__label-row">
+                        <span class="constructor__label-text">
+                            До какой даты
+                        </span>
+                        <input type="text" class="form-input"
+                            placeholder="00.00.0000"
+                            name="debt-payments-date[]"
+                            data-input-required
+                            data-input-date="d.m.Y">
+                    </label>
+                </div>
+                <div class="constructor__col">
+                    <label class="constructor__label-row">
+                        <span class="constructor__label-text">
+                            Сумма в рублях
+                        </span>
+                        <input type="text" class="form-input"
+                            name="debt-payments-amount[]"
+                            data-input-required
+                            data-input-mask-number-space
+                        >
+                    </label>
+                </div>
+            </div>
+            <button 
+                class="btn-toggle" 
+                type="button" 
+                data-constructor-form-field-add-name="debt-payments"
+                data-constructor-form-field-add='{
+                    "url": "./templates/constructor-form-item-5.html"
+                }'>
+                <span class="btn-toggle__icon"></span>
+                <span class="btn-toggle__text">Добавить задолженность</span>
+            </button>
+        </div>
+
+        <div class="constructor__item mt-32px">
+            <div 
+                class="constructor__row"
+                data-form-field-visible-multiple='[
+                    {
+                        "statement-type": ["doc2"],
+                        "debt-type": ["ie"],
+                        "debt-payments-not-paid": [""],
+                        "conclusion-change-requirements": ["val1", "val2"]
+                    },
+                    {
+                        "statement-type": ["doc1"],
+                        "consumer-protection-claim": ["no"],
+                        "requirements": ["1.1", "1.2", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "4.1", "4.2", "4.3", "4.4", "5.1", "5.2", "5.3", "6", "7.1", "8.1", "8.2", "8.3", "9.1", "10.1", "11", "12.1", "12.2", "13", "14.1", "14.4", "15", "16.1"],
+                        "debt-type": ["ie"],
+                        "debt-payments-not-paid": [""]
+                    }
+                ]'
+            >
+                <div class="constructor__col">
+                    Загрузите сканы платежных поручений, квитанций об оплате этой задолженности
+                </div>
+                <div class="constructor__col">
+                    <div class="file-attacher" data-file-attacher>
+                        <input 
+                            id="debt-payments-file" 
+                            accept=".xls, .xlsx, application/vnd.ms-excel" 
+                            type="file" 
+                            name="debt-payments-file" 
+                            data-file-attacher-input
+                            data-input-required
+                            class="file-attacher__input" 
+                        />
+                        <label class="file-attacher__btn-text" for="debt-payments-file" data-file-attacher-add-btn>
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-file"></use>
+                            </svg>
+                            <span>Прикрепить файл </span>
+                        </label>
+                        <ul class="file-attacher__list" data-file-attacher-file-list></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="constructor__row">
+                <div class="constructor__col">
+                    <label class="radio radio--lg">
+                        <input class="radio__input" 
+                            type="checkbox"
+                            name="debt-payments-not-paid"
+                            value="yes"
+                        />
+                        <span class="radio__emulator">
+                            <svg class="radio__icon i-icon">
+                                <use xlink:href="#icon-check"></use>
+                            </svg>
+                        </span>
+                        <span class="radio__label radio__label--bold color-red">
+                            оплата не производилась
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+<!-- 5.1 debt-collection-type --> 
+<fieldset 
+    data-form-field-visible-multiple='[
+        {
+            "statement-type": ["doc2"],
+            "conclusion-change-requirements": ["val1", "val2"]
+        },
+        {
+            "statement-type": ["doc1"],
+            "consumer-protection-claim": ["no"],
+            "requirements": ["1.1", "1.2", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "4.1", "4.2", "4.3", "4.4", "5.1", "5.2", "5.3", "6", "7.1", "8.1", "8.2", "8.3", "9.1", "10.1", "11", "12.1", "12.2", "13", "14.1", "14.4", "15", "16.1"]
+        }
+    ]'
+    class="constructor__block"
+>
+    <legend class="h4 constructor__block-title">5.1. Укажите какую задолженность нужно взыскать:</legend>
+    <div class="constructor__item">
+        <div class="constructor__row">
+            <div class="constructor__col">
+                <label class="radio radio--lg">
+                    <input
+                        class="radio__input"
+                        type="radio"
+                        name="debt-collection-type"
+                        value="val1"
+                        checked
+                    />
+                    <span class="radio__emulator">
+                    <svg class="radio__icon i-icon">
+                        <use xlink:href="#icon-check"></use>
+                    </svg>
+                    </span>
+                    <span class="radio__label">всю просроченную</span>
+                </label>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col">
+                <label class="radio radio--lg">
+                    <input
+                        class="radio__input"
+                        type="radio"
+                        name="debt-collection-type"
+                        value="val2"
+                    />
+                    <span class="radio__emulator">
+                    <svg class="radio__icon i-icon">
+                        <use xlink:href="#icon-check"></use>
+                    </svg>
+                    </span>
+                    <span class="radio__label">только в пределах исковой давности</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</fieldset>

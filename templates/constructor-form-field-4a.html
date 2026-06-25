@@ -1,0 +1,30 @@
+<div class="constructor__row" data-row>
+    <div class="constructor__col constructor__col--w constructor__col--tb-full">
+        <label class="constructor__label-row">
+            <span class="constructor__label-text">
+                Каким образом*
+            </span>
+            <input type="text" class="form-input"
+                   name="how-recognized-debt-text[]"
+                   data-input-required>
+        </label>
+    </div>
+    <div class="constructor__col">
+        <label class="constructor__label-row">
+            <span class="constructor__label-text">
+                За период*
+            </span>
+            <input type="text" class="form-input"
+                   name="how-recognized-debt-date[]"
+                   placeholder="Месяц 0000"
+                   data-input-required
+                   data-input-date="m.Y"
+                   data-input-date-only-month>
+        </label>
+    </div>
+    <button class="constructor__row-delete btn-toggle btn-toggle--delete" type="button"
+            data-btn-delete-row>
+        <span class="btn-toggle__icon"></span>
+        <span class="btn-toggle__text">Удалите эту строку, если она добавлена Вами ошибочно</span>
+    </button>
+</div>

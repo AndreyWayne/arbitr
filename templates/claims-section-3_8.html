@@ -1,0 +1,80 @@
+<fieldset 
+  data-form-field-visible='{
+    "statement-type": ["doc1"],
+    "consumer-protection-claim": ["no"],
+    "requirements": ["14.2.1", "14.2.2", "14.2.3"]
+  }'
+  class="constructor__block"
+>
+  <div class="flex flex-wrap-tablet ga-12 mb-title constructor__label-cite">
+    <legend class="h4 mb-0 constructor__label-block">
+      3.8. Согласно транспортной накладной / коносамента груз
+      <u>должен быть</u>
+      доставлен перевозчиком
+    </legend>
+    <div class="flex-grow-2">
+      <input
+        type="text"
+        name="carrier-delivery-due-date"
+        placeholder="месяц.0000г."
+        data-input-date-only-month
+        data-input-date="m.Y"
+        data-input-required
+        class="form-input w-200px min-w-100px"
+      />
+      <cite class="note w-300px">укажите должную дату прибытия груза в пункт назначения (по накладной)</cite>
+    </div>
+  </div>
+  <div class="constructor__item">
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--xxs">
+        <div class="constructor__label-row">
+          <span class="constructor__label-text">
+            Укажите
+            <u>фактическую</u>
+            дату прибытия груза
+          </span>
+          <input
+            type="text"
+            name="carrier-delivery-fact-date"
+            placeholder="месяц.0000г."
+            data-input-date-only-month
+            data-input-date="m.Y"
+            data-input-required
+            class="form-input w-200px"
+          />
+        </div>
+      </div>
+
+      <div class="constructor__col constructor__col--xxs">
+        <div class="constructor__label-row">
+          <span class="constructor__label-text"> , что зафиксировано актом от </span>
+          <input
+            name="carrier-delivery-act-date"
+            placeholder="месяц.0000г."
+            data-input-date-only-month
+            data-input-date="m.Y"
+            data-input-required
+            class="form-input w-200px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="constructor__row">
+      <div class="constructor__col constructor__col--full">
+        <div class="constructor__label-row constructor__label-cite">
+          <div class="constructor__label-text">Размер провозной платы за перевозку этого груза составляет</div>
+          <div class="flex ga-12 items-center flex-grow-2">
+            <input
+              name="carrier-delivery-sum"
+              data-input-required
+              type="number"
+              class="form-input w-200px"
+            />
+            <span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

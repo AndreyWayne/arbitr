@@ -1,0 +1,84 @@
+<fieldset 
+  data-form-field-visible='{
+    "statement-type": ["doc1"],
+    "consumer-protection-claim": ["no"],
+    "requirements": ["17"]
+  }'
+  class="constructor__block"
+>
+    <legend class="h4 constructor__block-title">3.11. Вознаграждение взыскивается:</legend>
+    <div class="constructor__item">
+      <div class="constructor__row">
+        <div class="constructor__col">
+          <label class="radio radio--lg">
+            <input
+              class="radio__input"
+              type="radio"
+              name="reward-to-be-collected-type"
+              value="commission"
+              checked
+            />
+            <span class="radio__emulator">
+              <svg class="radio__icon i-icon">
+                <use xlink:href="#icon-check"></use>
+              </svg>
+            </span>
+            <span class="radio__label">по договору комиссии</span>
+          </label>
+        </div>
+      </div>
+      <div class="constructor__row">
+        <div class="constructor__col">
+          <label class="radio radio--lg">
+            <input
+              class="radio__input"
+              type="radio"
+              name="reward-to-be-collected-type"
+              value="agency"
+            />
+            <span class="radio__emulator">
+              <svg class="radio__icon i-icon">
+                <use xlink:href="#icon-check"></use>
+              </svg>
+            </span>
+            <span class="radio__label">по агентскому договору</span>
+          </label>
+        </div>
+      </div>
+      <div class="constructor__row">
+        <div class="constructor__col constructor__col--full">
+          <div class="constructor__label-row constructor__label-cite">
+            <div class="constructor__label-text">
+                Вознаграждение подлежит уплате в связи с
+            </div>
+            <div class="w-full">
+              <input
+                data-input-required
+                name="reward-to-be-collected-paid-actions"
+                class="form-input flex-grow-2"
+              />
+              <cite class="note">укажите, в чем заключаются оплачиваемые действия комиссионера / агента</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="constructor__row">
+        <div class="constructor__col constructor__col--full">
+          <div class="constructor__label-row constructor__label-cite">
+            <div class="constructor__label-text">
+                Размер вознаграждения составляет
+            </div>
+            <div class="flex ga-12 items-center flex-grow-2">
+              <input
+                type="number"
+                data-input-required
+                name="reward-to-be-collected-size-sum"
+                class="form-input w-200px"
+              />
+              <span>руб.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</fieldset>

@@ -1,0 +1,294 @@
+<fieldset 
+  data-form-field-visible='{
+    "consumer-protection-claim": ["yes"],
+    "statement-type": ["doc1"],
+    "claim-cause": ["val3", "val4"]
+  }'
+  class="constructor__block"
+>
+    <div class="flex-wrap ga-12 mb-title">
+        <legend class="h4 mb-0">
+            3.15. Факт причинения ущерба Вашему имуществу подтверждается 
+        </legend>
+        <div class="file-attacher" data-file-attacher>
+            <input 
+                id="facts-damage-coused-file" 
+                accept=".pdf" 
+                type="file" 
+                name="facts-damage-coused-file" 
+                data-file-attacher-input
+                data-input-required
+                class="file-attacher__input" 
+            />
+            <label class="file-attacher__btn-text" for="facts-damage-coused-file" data-file-attacher-add-btn>
+                <svg class="i-icon">
+                    <use xlink:href="#icon-file"></use>
+                </svg>
+                <span>Прикрепить файл </span>
+            </label>
+            <cite class="note d-none-full-below-br">загрузите в формате pdf скан акта об ущербе / акта обследования или иного акта / <br> ответа на обращение, подтверждающего неисправность общего имущества или <br> причинение ущерба падением дерева на придомовой территории </cite>
+            <ul class="file-attacher__list" data-file-attacher-file-list></ul>
+        </div>
+    </div>
+    <div class="constructor__item">
+        <b class="constructor__light-label">
+            Неисправности общедомового оборудования / строительных конструкций, явившиеся причиной ущерба:
+        </b>
+        <div class="constructor__row">
+            <div class="constructor__col constructor__col--full">
+              <div class="constructor__flex-gap items-start">
+                <label class="radio radio--lg">
+                  <input
+                    class="radio__input"
+                    type="radio"
+                    name="facts-damage-coused-malfunctions"
+                    value="val1"
+                    checked
+                  />
+                  <span class="radio__emulator">
+                    <svg class="radio__icon i-icon">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="radio__label">устранены</span>
+                </label>
+                <div 
+                  data-form-field-visible='{
+                    "facts-damage-coused-malfunctions": ["val1"]
+                  }'
+                  class="constructor__col--grow-2"
+                >
+                  <input
+                    placeholder="00.00.0000"
+                    data-input-required
+                    data-input-date="d.m.Y"
+                    name="facts-damage-coused-malfunctions-date"
+                    class="form-input w-340px"
+                  />
+                  <cite class="note">укажите дату выполнения мероприятий по устранению причины ущерба</cite>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col">
+              <label class="radio radio--lg">
+                <input
+                  class="radio__input"
+                  type="radio"
+                  name="facts-damage-coused-malfunctions"
+                  value="val2"
+                />
+                <span class="radio__emulator">
+                  <svg class="radio__icon i-icon">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </span>
+                <span class="radio__label">не устранены</span>
+              </label>
+            </div>
+        </div>
+        <b class="constructor__light-label">
+            Если аварийная ситуация произошла на системе ХГВС (включая гибкую подводку к смесителям, полотенцесушители), водоотведения, отопления или электроснабжения, отметьте:
+        </b>
+        <div class="constructor__row">
+            <div class="constructor__col">
+              <label class="radio radio--lg">
+                <input
+                  class="radio__input"
+                  type="radio"
+                  name="facts-damage-coused-accident"
+                  value="val1"
+                  checked
+                />
+                <span class="radio__emulator">
+                  <svg class="radio__icon i-icon">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </span>
+                <span class="radio__label">авария локализована (перекрыта подача воды / обесточен подъезд) <b>немедленно</b> после прибытия аварийной бригады на дом</span>
+              </label>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col">
+              <label class="radio radio--lg">
+                <input
+                  class="radio__input"
+                  type="radio"
+                  name="facts-damage-coused-accident"
+                  value="val2"
+                />
+                <span class="radio__emulator">
+                  <svg class="radio__icon i-icon">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </span>
+                <span class="radio__label">аварийная бригада прибыла позже 30 мин с момента оставления аварийной заявки диспетчеру управляющей организации</span>
+              </label>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col">
+              <label class="radio radio--lg">
+                <input
+                  class="radio__input"
+                  type="radio"
+                  name="facts-damage-coused-accident"
+                  value="val3"
+                />
+                <span class="radio__emulator">
+                  <svg class="radio__icon i-icon">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </span>
+                <span class="radio__label">авария локализована не сразу, но в пределах этих 30 мин</span>
+              </label>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col">
+              <label class="radio radio--lg">
+                <input
+                  class="radio__input"
+                  type="radio"
+                  name="facts-damage-coused-accident"
+                  value="val4"
+                />
+                <span class="radio__emulator">
+                  <svg class="radio__icon i-icon">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </span>
+                <span class="radio__label">у меня другая ситация</span>
+              </label>
+            </div>
+        </div>
+        <div class="constructor__row flex-nowrap-desktop items-baseline">
+            <div class="constructor__col constructor__col--xxs">
+              <label class="constructor__label-row">
+                <span class="constructor__label-text">
+                    Размер причиненного Вам ущерба составляет
+                </span>
+                <input
+                  type="number"
+                  data-input-required
+                  name="facts-damage-coused-damage-size"
+                  class="form-input w-200px"
+                />
+              </label>
+            </div>
+            <div class="constructor__col constructor__col--xxs">
+              <label class="constructor__label-row items-start">
+                <span class="constructor__label-text"> руб. и подтверждается  </span>
+                <div class="file-attacher" data-file-attacher>
+                    <input 
+                        id="facts-damage-coused-damage-file" 
+                        accept=".pdf" 
+                        type="file" 
+                        name="facts-damage-coused-damage-file" 
+                        data-file-attacher-input
+                        data-input-required
+                        class="file-attacher__input" 
+                    />
+                    <label class="file-attacher__btn-text" for="facts-damage-coused-damage-file" data-file-attacher-add-btn>
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-file"></use>
+                        </svg>
+                        <span>Прикрепить файл </span>
+                    </label>
+                    <cite class="note">загрузите в формате pdf скан первой страницы и выводов из отчета / справки об оценке ущерба </cite>
+                    <ul class="file-attacher__list" data-file-attacher-file-list></ul>
+                </div>
+              </label>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col constructor__col--full">
+              <div class="constructor__label-row constructor__label-cite">
+                <div class="constructor__label-text">
+                    Для установления причины и оценки ущерба Вы понесли расходы в размере
+                </div>
+                <div class="flex ga-12 items-center flex-grow-2">
+                  <input
+                    type="number"
+                    data-input-required
+                    name="facts-damage-coused-damage-find-sum"
+                    class="form-input w-200px"
+                  />
+                  <span>руб.</span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col constructor__col--full">
+              <div class="constructor__label-row constructor__label-cite">
+                <div class="constructor__label-text">
+                    Претензия о возмещении ущерба получена лицом, ответственным за ущерб / доставлена на его адрес
+                </div>
+                <input
+                  data-input-required
+                  name="facts-damage-coused-claim-address"
+                  class="form-input w-200px"
+                />
+              </div>
+            </div>
+        </div>
+        <b class="constructor__light-label">
+            Данная претензия:
+        </b>
+        <div class="constructor__row">
+            <div class="constructor__col constructor__col--full">
+              <div class="constructor__flex-gap items-start">
+                <label class="radio radio--lg">
+                  <input
+                    class="radio__input"
+                    type="radio"
+                    name="facts-damage-coused-claim-type"
+                    value="val1"
+                    checked
+                  />
+                  <span class="radio__emulator">
+                    <svg class="radio__icon i-icon">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="radio__label">удовлетворена частично, а именно виновным лицом выплачена</span>
+                </label>
+                <div 
+                  data-form-field-visible='{
+                    "facts-damage-coused-claim-type": ["val1"]
+                  }'  
+                  class="constructor__col--grow-2"
+                >
+                  <input
+                    data-input-required
+                    name="facts-damage-coused-claim-sum"
+                    class="form-input"
+                  />
+                  <cite class="note">укажите какие расходы и в каком размере были возмещены и чем являются выплаченные суммы </cite>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="constructor__row">
+            <div class="constructor__col">
+              <label class="radio radio--lg">
+                <input
+                  class="radio__input"
+                  type="radio"
+                  name="facts-damage-coused-claim-type"
+                  value="val2"
+                />
+                <span class="radio__emulator">
+                  <svg class="radio__icon i-icon">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </span>
+                <span class="radio__label">оставлена без удовлетворения</span>
+              </label>
+            </div>
+        </div>
+    </div>
+</fieldset>
