@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример сетки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/sa-si-dev/virtual-select/master/dist/virtual-select.min.css">
+	<script src="https://www.google.com/recaptcha/api.js?onload=renderCaptcha&render=explicit"
+			async defer>
+	</script>
+	<script>
+
+		var renderCaptcha = function () {
+			var captchas = document.querySelectorAll('.g-recaptcha')
+			if (captchas.length) {
+				captchas.forEach((el, index) => {
+					grecaptcha.render(el, {
+						'sitekey': '6Lfr3gwaAAAAAEiRBwpWY0c6EOphsv7t1x4oU4o4',
+						'callback': function () {
+							el.classList.remove('invalid')
+							el.nextElementSibling.textContent = ''
+						}
+					})
+				})
+			}
+		}
+
+	</script>
+<link href="styles/main.css" rel="stylesheet"></head>
+<body>
+
+<header class="header-site">
+	<div class="burger-container header-site__burger-container">
+		<button class="burger-button" type="button" aria-label="Открыть меню" data-menu-btn-open>
+			<span class="burger-button__line"></span>
+			<span class="burger-button__line"></span>
+			<span class="burger-button__line"></span>
+		</button>
+	</div>
+
+	<a href="main.html" class="logo logo--white header-site__logo">
+		Арбитр-консалт +
+	</a>
+	<a href="tel:+79822731968" class="header-site__tel">
+		+7 982 273 1968
+	</a>
+</header>
+
+<nav class="menu" data-menu>
+	<div class="menu__overlay" data-menu-overlay></div>
+	<div class="menu__top">
+		<div class="menu__close-container">
+			<button class="menu__close" type="button" aria-label="Закрыть меню" data-menu-btn-close></button>
+		</div>
+		<a href="main.html" class="logo menu__logo">
+			Арбитр-консалт +
+		</a>
+	</div>
+	<div class="menu__login">
+		<div class="menu__login-wrap">
+			<a  href="#" class="menu__login-item" data-login>
+				<div class="menu__login-photo">
+					<svg><use href="#icon-avatar"/></svg>
+				</div>
+				<p class="menu__login-text">
+					<span style="display: none;">Паннова Е.В.</span>
+					<span>Войти</span>
+				</p>
+			</a>
+			<a href="#" class="menu__login-item">
+				<div class="menu__login-photo">
+					<svg style="fill: transparent"><use href="#icon-cart"/></svg>
+				</div>
+				<p class="menu__login-text">
+					<span>Корзина</span>
+				</p>
+			</a>
+		</div>
+	</div>
+	<div class="menu__scrollable" data-menu-scrollable>
+		<ul class="menu-list">
+			<!-- для активного пункта меню нужно добавить класс active для li -->
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link">
+					Онлайн-конструктор заявлений <br> о взыскании договорной задолженности
+				</a>
+			</li>
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link menu-list__link--external">
+					<span>Образцы процессуальных <br> документов в суд</span>
+					<svg class="i-icon menu-list__link-icon">
+						<use xlink:href="#icon-link-external"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link menu-list__link--external">
+					<span>Представительство в суде</span>
+					<svg class="i-icon menu-list__link-icon">
+						<use xlink:href="#icon-link-external"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link">
+					Видеотека заседаний высших судов
+				</a>
+			</li>
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link">
+					В помощь коммерсанту
+				</a>
+			</li>
+		</ul>
+
+		<div class="menu__contacts">
+			<div class="menu__contacts-item">
+				<a href="tel:+79822731968" class="menu__contacts-link">
+					+7 982 273 1968
+				</a>
+			</div>
+			<div class="menu__contacts-item">
+				<a href="mailto:info@mail.ru" class="menu__contacts-link link link--underline">
+					info@mail.ru
+				</a>
+			</div>
+		</div>
+
+		<div class="menu__files">
+			<a href="" class="file menu__file">
+				<svg class="file__icon i-icon">
+	                <use xlink:href="#icon-download"></use>
+	            </svg>
+	            <span class="file__text">
+	            	Реквизиты.pdf
+	            </span>
+			</a>
+		</div>
+
+	</div>
+</nav>
+
+<div class="content">
+
+<div class="container">
+    <h1>Пример сетки</h1>
+
+    <h2>Обычная сетка</h2>
+
+    <div class="grid">
+        <div class="grid-col">1</div>
+        <div class="grid-col">2</div>
+        <div class="grid-col">3</div>
+    </div>
+
+    <h2>Кастомная сетка <small>(см. custom-grid.css)</small></h2>
+
+    <div class="custom-grid">
+        <div class="custom-grid-col">1</div>
+        <div class="custom-grid-col">2</div>
+        <div class="custom-grid-col">3</div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-wrap">
+        © ООО «Арбитр-консалт +» 2024
+    </div>
+</footer>
+<div class="modal-login-overlay" id="modal-login">
+    <div class="modal-login">
+        <div class="modal-login__close">
+            <svg>
+                <use href="#icon-close"/>
+            </svg>
+        </div>
+        <div class="modal-login__tabs">
+            <div class="modal-login__header">
+                <div class="modal-login__link is-active" data-tabs-link="login">Авторизация</div>
+                <div class="modal-login__link" data-tabs-link="reg">Регистрация</div>
+            </div>
+            <div class="modal-login-body" data-tabs-links>
+                <div class="modal-login-item is-active" data-tabs-tab="login">
+                    <div class="form">
+                        <form id="" data-form data-ajax-success-form="modal-success">
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">Логин*</label>
+                                    <input type="text" placeholder="exaple@domain.com" data-input-required>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">Пароль</label>
+                                    <input type="password" placeholder="Пароль" data-input-required>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <a href="#" class="recovery-link">Забыли пароль?</a>
+                                    <button class="btn" type="submit">Вход</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-login-item" data-tabs-tab="reg">
+                    <div class="toggle" data-select-form="private_person">
+                        <div class="toggle__link is-active" data-tabs-link="private_person">Физ. лицо</div>
+                        <span class="toggle-bg">
+                            <span class="toggle-bg__switch"></span>
+                        </span>
+                        <div class="toggle__link" data-tabs-link="organization">Юр. лицо</div>
+                    </div>
+                    <div class="form form--reg is-active" data-tabs-tab="private_person">
+                        <form id="" data-form>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">ФИО</label>
+                                    <input type="text" placeholder="Ваше ФИО(полностью)" data-input-required>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">E-mail</label>
+                                    <input type="email" placeholder="E-mail" data-input-required>
+                                </div>
+                            </div>
+
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">Пароль</label>
+                                    <input type="password" placeholder="Пароль" data-input-required="password" data-password>
+
+                                    <span class="form__input-icon" data-toggle-pass><svg><use
+                                                    href="#eye-closed"/></svg></span>
+                                    <span class="password-note">
+                                        Пароль должен быть не менее 8 символов
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <input type="password" placeholder="Подтвердите пароль" data-input-required="password" data-password>
+                                    <span class="form__input-icon" data-toggle-pass><svg><use
+                                                    href="#eye-closed"/></svg></span>
+                                </div>
+                            </div>
+
+                            <div class="form__row">
+                                <div class="g-recaptcha"></div>
+                            </div>
+                            <div class="form__row policy">
+                                Нажимая кнопку " Регистрация", я даю своё согласие на обработку моих персональных данных
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <button class="btn" type="submit">Регистрация</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form form--reg" data-tabs-tab="organization">
+                        <form id="" data-form>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">Полное наименование вашего юридического лица - заказчика</label>
+                                    <input type="text" placeholder="Наименование юр. лица - заказчика или ваше ФИО"
+                                           data-input-required>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">ИНН заказчика</label>
+                                    <input type="text" placeholder="0000000000" data-input-required
+                                           data-input-mask-only-numbers>
+                                </div>
+
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">Контактное лицо</label>
+                                    <input type="text" placeholder="ФИО(полностью)" data-input-required>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">E-mail контактного лица</label>
+                                    <input type="email" placeholder="E-mail" data-input-required>
+                                </div>
+                            </div>
+                            <div class="rorm__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">Мобильный телефон контактного лица</label>
+                                    <input type="text" placeholder="+ 7 000 000 00 00" class="inputmask"
+                                           data-input-required>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <label for="">Пароль</label>
+                                    <input type="password" placeholder="Пароль" data-input-required="password" data-password>
+
+                                    <span class="form__input-icon" data-toggle-pass><svg><use
+                                                    href="#eye-closed"/></svg></span>
+                                    <span class="password-note">
+                                        Пароль должен быть не менее 8 символов
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <input type="password" placeholder="Подтвердите пароль" data-input-required="password" data-password>
+                                    <span class="form__input-icon" data-toggle-pass><svg><use
+                                                    href="#eye-closed"/></svg></span>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="g-recaptcha"></div>
+                            </div>
+                            <div class="policy">Нажимая кнопку " Регистрация", я даю своё согласие на обработку моих персональных данных</div>
+                            <div class="form__row">
+                                <div class="form__col form__col-full">
+                                    <button class="btn" type="submit">Регистрация</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-add-cart" id="modal-add-cart">
+    <div class="modal-login__close">
+        <svg>
+            <use href="#icon-close"/>
+        </svg>
+    </div>
+    <h3>Решение добавлено в корзину</h3>
+    <p>Перейдите в корзину и оформите заказ или продолжите покупки</p>
+    <div class="modal-add-cart__act">
+        <a href="#" class="btn">Перейти в корзину</a>
+        <a href="#" class="btn btn--white">Продолжить покупки</a>
+    </div>
+</div>
+
+<div class="modal modal--success popup-modal" id="modal-success">
+    <div class="modal__top">
+        <div class="modal__heading h1">
+            Регистрация прошла успешно
+        </div>
+        <div class="modal__subheading">
+            Проверьте свой e-mail
+        </div>
+    </div>
+</div>
+<div class="modal modal--error" id="modal-error">
+    <div class="modal__top">
+        <div class="modal__heading h1">
+            Произошла ошибка!
+        </div>
+        <div class="modal__subheading">
+            Попытайтесь позже
+        </div>
+    </div>
+
+</div>
+
+</div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
