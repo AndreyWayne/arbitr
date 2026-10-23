@@ -1,0 +1,322 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>В помощь коммерсанту</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/sa-si-dev/virtual-select/master/dist/virtual-select.min.css">
+	<script src="https://www.google.com/recaptcha/api.js?onload=renderCaptcha&render=explicit"
+			async defer>
+	</script>
+	<script>
+
+		var renderCaptcha = function () {
+			var captchas = document.querySelectorAll('.g-recaptcha')
+			if (captchas.length) {
+				captchas.forEach((el, index) => {
+					grecaptcha.render(el, {
+						'sitekey': '6Lfr3gwaAAAAAEiRBwpWY0c6EOphsv7t1x4oU4o4',
+						'callback': function () {
+							el.classList.remove('invalid')
+							el.nextElementSibling.textContent = ''
+						}
+					})
+				})
+			}
+		}
+
+	</script>
+<link href="styles/main.css" rel="stylesheet"></head>
+<body>
+
+<header class="header-site">
+	<div class="burger-container header-site__burger-container">
+		<button class="burger-button" type="button" aria-label="Открыть меню" data-menu-btn-open>
+			<span class="burger-button__line"></span>
+			<span class="burger-button__line"></span>
+			<span class="burger-button__line"></span>
+		</button>
+	</div>
+
+	<a href="main.html" class="logo logo--white header-site__logo">
+		Арбитр-консалт +
+	</a>
+	<a href="tel:+79822731968" class="header-site__tel">
+		+7 982 273 1968
+	</a>
+</header>
+
+<nav class="menu" data-menu>
+	<div class="menu__overlay" data-menu-overlay></div>
+	<div class="menu__top">
+		<div class="menu__close-container">
+			<button class="menu__close" type="button" aria-label="Закрыть меню" data-menu-btn-close></button>
+		</div>
+		<a href="main.html" class="logo menu__logo">
+			Арбитр-консалт +
+		</a>
+	</div>
+	<div class="menu__login">
+		<div class="menu__login-wrap">
+			<a  href="#" class="menu__login-item" data-login>
+				<div class="menu__login-photo">
+					<svg><use href="#icon-avatar"/></svg>
+				</div>
+				<p class="menu__login-text">
+					<span style="display: none;">Паннова Е.В.</span>
+					<span>Войти</span>
+				</p>
+			</a>
+			<a href="#" class="menu__login-item">
+				<div class="menu__login-photo">
+					<svg style="fill: transparent"><use href="#icon-cart"/></svg>
+				</div>
+				<p class="menu__login-text">
+					<span>Корзина</span>
+				</p>
+			</a>
+		</div>
+	</div>
+	<div class="menu__scrollable" data-menu-scrollable>
+		<ul class="menu-list">
+			<!-- для активного пункта меню нужно добавить класс active для li -->
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link">
+					Онлайн-конструктор заявлений <br> о взыскании договорной задолженности
+				</a>
+			</li>
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link menu-list__link--external">
+					<span>Образцы процессуальных <br> документов в суд</span>
+					<svg class="i-icon menu-list__link-icon">
+						<use xlink:href="#icon-link-external"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link menu-list__link--external">
+					<span>Представительство в суде</span>
+					<svg class="i-icon menu-list__link-icon">
+						<use xlink:href="#icon-link-external"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link">
+					Видеотека заседаний высших судов
+				</a>
+			</li>
+			<li class="menu-list__item">
+				<a href="#" class="menu-list__link">
+					В помощь коммерсанту
+				</a>
+			</li>
+		</ul>
+
+		<div class="menu__contacts">
+			<div class="menu__contacts-item">
+				<a href="tel:+79822731968" class="menu__contacts-link">
+					+7 982 273 1968
+				</a>
+			</div>
+			<div class="menu__contacts-item">
+				<a href="mailto:info@mail.ru" class="menu__contacts-link link link--underline">
+					info@mail.ru
+				</a>
+			</div>
+		</div>
+
+		<div class="menu__files">
+			<a href="" class="file menu__file">
+				<svg class="file__icon i-icon">
+	                <use xlink:href="#icon-download"></use>
+	            </svg>
+	            <span class="file__text">
+	            	Реквизиты.pdf
+	            </span>
+			</a>
+		</div>
+
+	</div>
+</nav>
+
+<div class="content">
+
+<div class="page">
+    <div class="container">
+        <div class="page__header">
+            <div class="page__breadcrumbs">
+                
+
+
+<ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+  
+    
+      <li class="breadcrumbs__item" title="Главная">
+        Главная
+      </li>
+    
+  
+    
+      <li class="breadcrumbs__item" title="В помощь коммерсанту">
+        В помощь коммерсанту
+      </li>
+    
+  
+</ul>
+
+            </div>
+            <div class="page__title">
+                <h1 class="h1">
+                    В помощь коммерсанту
+                </h1>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="search">
+                <form action="#" class="search__form"
+                      data-search-form='{
+						"isDebug": "true",
+						"url": "",
+						"content": ""
+					}'>
+                    <input minlength="3" type="search" class="search__form-input" placeholder="Быстрый поиск" name="q"
+                           data-search-input>
+                    <button class="search__submit" type="submit" aria-label="Начать поиск">
+                        <svg class="search__submit-icon i-icon">
+                            <use xlink:href="#icon-search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="articles">
+                <div class="articles__list">
+                    <div class="articles__item">
+                        <div class="articles__item-text">
+                            <p class="articles__item-text__date">01.11.2020</p>
+                            <h3 class="h3 articles__item-title">
+                                <a href="#">Разрешение споров из международных (внешнеторговых) контрактов.</a>
+                            </h3>
+                            <p>
+                                Под международным контрактом понимается сделка между двумя или более сторонами,
+                                находящимися в разных странах, по купле-продаже или поставке товара, выполнению работ
+                                или оказанию услуг или иным видам хозяйственной деятельности в соответствии с
+                                согласованными сторонами условиями.
+                            </p>
+                        </div>
+                        <div class="articles__item-img">
+                            <img src="./images/articles_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="articles__item">
+                        <div class="articles__item-text">
+                            <p class="articles__item-text__date">01.11.2020</p>
+                            <h3 class="h3 articles__item-title">
+                                <a href="#">Разрешение споров из международных (внешнеторговых) контрактов.</a>
+                            </h3>
+                            <p>
+                                Под международным контрактом понимается сделка между двумя или более сторонами,
+                                находящимися в разных странах, по купле-продаже или поставке товара, выполнению работ
+                                или оказанию услуг или иным видам хозяйственной деятельности в соответствии с
+                                согласованными сторонами условиями.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="articles__item">
+                        <div class="articles__item-text">
+                            <p class="articles__item-text__date">01.11.2020</p>
+                            <h3 class="h3 articles__item-title">
+                                <a href="#">Разрешение споров из международных (внешнеторговых) контрактов.</a>
+                            </h3>
+                            <p>
+                                Под международным контрактом понимается сделка между двумя или более сторонами,
+                                находящимися в разных странах, по купле-продаже или поставке товара, выполнению работ
+                                или оказанию услуг или иным видам хозяйственной деятельности в соответствии с
+                                согласованными сторонами условиями.
+                            </p>
+                        </div>
+                        <div class="articles__item-img">
+                            <img src="./images/articles_1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            
+
+<nav class="pagination" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <ul class="pagination__items">
+        
+            <li class="pagination__item  pagination__item--active">
+                
+                    <a href="./" class="pagination__link" itemprop="url">
+                        <span itemprop="name">
+                            1
+                        </span>
+                    </a>
+                
+
+                
+            </li>
+        
+            <li class="pagination__item ">
+                
+                    <a href="./" class="pagination__link" itemprop="url">
+                        <span itemprop="name">
+                            2
+                        </span>
+                    </a>
+                
+
+                
+            </li>
+        
+            <li class="pagination__item ">
+                
+
+                
+                    <span>
+                        ...
+                    </span>
+                
+            </li>
+        
+            <li class="pagination__item ">
+                
+                    <a href="./" class="pagination__link" itemprop="url">
+                        <span itemprop="name">
+                            10
+                        </span>
+                    </a>
+                
+
+                
+            </li>
+        
+            <li class="pagination__item ">
+                
+                    <a href="./" class="pagination__link" itemprop="url">
+                        <span itemprop="name">
+                            11
+                        </span>
+                    </a>
+                
+
+                
+            </li>
+        
+    </ul>
+</nav>
+        </section>
+
+    </div>
+</div><script type="text/javascript" src="bundle.js"></script>
